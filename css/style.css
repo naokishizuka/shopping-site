@@ -12,12 +12,15 @@ header {
     header .logo h1 img {
       display: block;
       margin: 0 auto; }
+    header .logo h1 .sp_only {
+      width: 100px; }
   header .nav .sp_nav {
     text-align: center;
     margin-top: 25px;
     position: relative; }
     header .nav .sp_nav img {
-      margin-left: 10px; }
+      margin-left: 10px;
+      width: 24px; }
       header .nav .sp_nav img:first-child {
         margin-left: 0px; }
     header .nav .sp_nav .sp_nav_li {
@@ -58,6 +61,7 @@ header {
       display: none; } }
 
 #contents {
+  padding-bottom: 120px;
   margin-top: 25px; }
   #contents .cover {
     height: 240px;
@@ -88,20 +92,34 @@ header {
   #contents .product {
     padding: 20px;
     background-color: white; }
+    @media (min-width: 550px) {
+      #contents .product {
+        padding: 50px 40px; } }
     #contents .product .head {
       display: flex;
       flex-direction: column;
-      padding: 15px 0; }
+      padding: 0 0 15px 0; }
       @media (min-width: 550px) {
         #contents .product .head {
+          padding: 0 0 30px 0;
           flex-direction: row; } }
       #contents .product .head h1 {
         font-size: 22px;
         font-size: 2.2rem;
         font-weight: bold;
         margin: 0 auto 0 0; }
+        @media (min-width: 550px) {
+          #contents .product .head h1 {
+            font-size: 14px;
+            font-size: 1.4rem; } }
       #contents .product .head span {
+        font-size: 20px;
+        font-size: 2rem;
         color: gray; }
+        @media (min-width: 550px) {
+          #contents .product .head span {
+            font-size: 10px;
+            font-size: 1rem; } }
     #contents .product .images {
       display: flex;
       flex-wrap: wrap; }
@@ -194,17 +212,19 @@ header {
       #contents .product .item table {
         margin-top: 10px;
         width: 100%;
-        border: 1px solid #eeeeee; }
+        border: 1px solid #e8e4da; }
         #contents .product .item table th, #contents .product .item table td {
+          color: #887f69;
+          font-weight: normal;
           text-align: center;
           padding: 15px;
-          border: 1px solid #eeeeee; }
+          border: 1px solid #e8e4da; }
           #contents .product .item table th label, #contents .product .item table td label {
             margin: 0; }
           #contents .product .item table th input[type="checkbox"], #contents .product .item table td input[type="checkbox"] {
             margin: 0; }
         #contents .product .item table th, #contents .product .item table td:nth-child(3n+1) {
-          background-color: #f9f8f6; }
+          background-color: #f9f9f5; }
     #contents .product .add_btn img {
       display: block;
       margin: 0 auto;
@@ -222,6 +242,8 @@ header {
       text-align: center;
       line-height: 0;
       margin: 0; }
+      #contents .content h2 .sp_only {
+        width: 100px; }
     #contents .content .nav_btns {
       margin-top: 20px;
       display: flex; }
@@ -366,6 +388,11 @@ header {
           #sidebar .item ul li span {
             font-size: 12px;
             font-size: 1.2rem; } }
+    #sidebar .item ul .category {
+      display: flex;
+      align-items: center; }
+      #sidebar .item ul .category span {
+        margin-right: auto; }
     #sidebar .item ul .row {
       display: flex; }
       @media (min-width: 550px) {
@@ -392,7 +419,13 @@ footer {
   border-top: 1px solid #887f69;
   text-align: center; }
   footer div {
-    margin-top: 20px; }
+    margin-top: 20px;
+    font-size: 18px;
+    font-size: 1.8rem; }
+    @media (min-width: 550px) {
+      footer div {
+        font-size: 12px;
+        font-size: 1.2rem; } }
     footer div span:first-child:before {
       content: ""; }
     footer div span:before {
@@ -400,7 +433,13 @@ footer {
       margin-right: 10px;
       margin-left: 10px; }
   footer .copyright {
+    font-size: 16px;
+    font-size: 1.6rem;
     color: #b8b4ac; }
+    @media (min-width: 550px) {
+      footer .copyright {
+        font-size: 10px;
+        font-size: 1rem; } }
 
 .owl-theme .owl-dots {
   text-align: left; }
@@ -426,7 +465,7 @@ footer {
 .checkbox_icon {
   padding-left: 20px;
   position: relative;
-  margin-right: 20px; }
+  margin-right: 0; }
   .checkbox_icon:before {
     content: "";
     display: block;
@@ -435,7 +474,7 @@ footer {
     left: 0;
     width: 15px;
     height: 15px;
-    border: 1px solid #eeeeee; }
+    border: 1px solid #e8e4da; }
 
 .checkbox:checked + .checkbox_icon {
   color: #b5b5b5; }
